@@ -8,6 +8,6 @@
    
 3: run the project using   `npm start`
    
-Edit and modify the code to you liking and create a pull request. 
+Edit and modify the code to your liking and create a pull request. 
 
 Let's build it together!
