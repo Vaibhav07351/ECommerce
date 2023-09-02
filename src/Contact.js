@@ -1,3 +1,4 @@
+// import { useEffect } from "react";
 import styled from "styled-components";
 
 
@@ -36,7 +37,11 @@ const Wrapper = styled.section`
 
 
 const Contact = () => {
+
+//  useEffect( ()=>{
+//   return <h1>Loading</h1>},[]
  
+//  );
   return(
     <>
         <Wrapper>

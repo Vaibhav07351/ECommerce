@@ -45,8 +45,8 @@ const Wrapper = styled.section`
 `;
 
 const Sort = () => {
-  const { filter_products, grid_view, setGridView, setListView, sorting } =
-    useFilterContext();
+  const { filter_products, grid_view, setGridView, setListView, sorting } = useFilterContext();
+    // console.log(filter_products);
   return (
     <Wrapper className="sort-section">
       {/* 1st column  */}
@@ -64,6 +64,7 @@ const Sort = () => {
         </button>
       </div>
 
+      
 
       {/* 2nd column  */}
       <div className="product-data">
@@ -85,9 +86,9 @@ const Sort = () => {
             <option value="#" disabled></option>
             <option value="highest">Price(highest)</option>
             <option value="#" disabled></option>
-            <option value="a-z">Price(a-z)</option>
+            <option value="a-z">Name(a-z)</option>
             <option value="#" disabled></option>
-            <option value="z-a">Price(z-a)</option>
+            <option value="z-a">Name(z-a)</option>
           </select>
         </form>
       </div>

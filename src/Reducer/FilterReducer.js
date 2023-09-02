@@ -30,9 +30,9 @@ const filterReducer = (state, action) => {
     case "SORTING_PRODUCTS":
       let newSortData;
       // let tempSortProduct = [...action.payload];
-
-      const { filter_products, sorting_value } = state;
-      let tempSortProduct = [...filter_products];
+console.log("state" ,state);
+      const { sorting_value } = state;
+      let tempSortProduct = [...action.payload];
 
       const sortingProducts = (a, b) => {
         if (sorting_value === "lowest") {
@@ -53,15 +53,16 @@ const filterReducer = (state, action) => {
       };
 
       newSortData = tempSortProduct.sort(sortingProducts);
-
+      
+      console.log(state.filter_products);
       return {
         ...state,
         filter_products: newSortData,
       };
-
+      
     case "UPDATE_FILTERS_VALUE":
       const { name, value } = action.payload;
-
+      
       return {
         ...state,
         filters: {
@@ -69,6 +70,8 @@ const filterReducer = (state, action) => {
           [name]: value,
         },
       };
+
+      
 
     case "FILTER_PRODUCTS":
       let { all_products } = state;
