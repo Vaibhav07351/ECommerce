@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BsFillGridFill, BsList } from "react-icons/bs";
 import { useFilterContext } from "../Context/FilterContext";
 
-
+                                {/* List/Grid icon ,    length of products available,          drop down filter of price,name */}
 const Wrapper = styled.section`
   display: flex;
   justify-content: space-between;
@@ -43,7 +43,7 @@ const Wrapper = styled.section`
     }
   }
 `;
-
+                                         {/* Contains List/Grid icon ,    length of products available,          drop down filter of price,name */}
 const Sort = () => {
   const { filter_products, grid_view, setGridView, setListView, sorting } = useFilterContext();
     // console.log(filter_products);
@@ -71,6 +71,7 @@ const Sort = () => {
         <p>{`${filter_products.length} Product Available`}</p>
       </div>
 
+  
 
 
       {/* 3rd column  */}
@@ -82,6 +83,8 @@ const Sort = () => {
             id="sort"
             className="sort-selection--style"
             onClick={sorting}>
+            <option value="Select Sorting Type">Select Sorting Type</option>
+            <option value="#" disabled></option>
             <option value="lowest">Price(lowest)</option>
             <option value="#" disabled></option>
             <option value="highest">Price(highest)</option>

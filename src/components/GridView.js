@@ -96,6 +96,8 @@ const Wrapper = styled.section`
 
 
 const GridView = ({ products }) => {
+
+
   return (
     <Wrapper className="section">
       <div className="container grid grid-three-column">

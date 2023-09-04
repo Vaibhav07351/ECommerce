@@ -22,14 +22,18 @@ const Products = () => {
     <Wrapper>
       <div className="container grid grid-filter-column">
         <div>
-          <FilterSection />
+                                                  {/* whole left side */}
+          <FilterSection />            
         </div>
 
         <section className="product-view--sort">
           <div className="sort-filter">
+                                                    {/* List/Grid icon ,    length of products available,          drop down filter of price,name */}
             <Sort />
           </div>
           <div className="main-product">
+
+                                                                  {/* Grid/List view */}
             <ProductList />
           </div>
         </section>
