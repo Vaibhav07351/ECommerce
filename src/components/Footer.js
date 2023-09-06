@@ -140,14 +140,14 @@ const Footer = () => {
                 <div className="footer-social--icons">
                     <div>
                         <a   href="https://www.linkedin.com/in/vaibhav--bhardwaj/"
-                            target="_blank">
+                            target="_blank" rel="noreferrer">
                             <FaDiscord className="icons" />  >
                         </a>
                     </div>
 
                     <div>
                         <a   href="https://www.linkedin.com/in/vaibhav--bhardwaj/"
-                            target="_blank">
+                            target="_blank"  rel="noreferrer">
                             <FaInstagram className="icons" />  >
                         </a> 
                     </div>
@@ -155,7 +155,7 @@ const Footer = () => {
                     <div>
                     <a
                         href="https://www.linkedin.com/in/vaibhav--bhardwaj/"
-                        target="_blank">
+                        target="_blank"  rel="noreferrer">
                         <FaYoutube className="icons" />
                     </a>
                     </div>
@@ -171,7 +171,7 @@ const Footer = () => {
             <hr />
             <div className="container grid grid-two-column ">
               <p>
-                @{new Date().getFullYear()} Vaibhav Bhardwaj. All Rights Reserved
+              © {new Date().getFullYear()} Vaibhav Bhardwaj. All Rights Reserved
               </p>
               <div>
                 <p>PRIVACY POLICY</p>

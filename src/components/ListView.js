@@ -1,7 +1,5 @@
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import FormatPrice from "../Helpers/FormatPrice";
-import { Button } from "../styles/Button";
+import Product2 from "./Product2";
 
 
 const Wrapper = styled.section`
@@ -90,36 +88,62 @@ const Wrapper = styled.section`
   }
 `;
 
+// return (
+//   <Wrapper className="section">
+//     <div className="container grid grid-three-column">
+//       {products.map((curElem) => {
+//         return <Product key={curElem.id} {...curElem} />;
+//       })}
+//     </div>
+//   </Wrapper>
+// );
+// };
+
+
 
 const ListView = ({ products }) => {
   return (
     <Wrapper className="section">
       <div className="container grid">
         {products.map((curElem) => {
-          const { id, name, image, price, description } = curElem;
-          return (
-            <div className="card grid grid-two-column">
-              <figure>
-                <img src={image} alt={name} />
-              </figure>
-
-              <div className="card-data">
-                <h3>{name}</h3>
-                <p>
-                  <FormatPrice price={price} />
-                </p>
-                <p>{description.slice(0, 90)}...</p>
-
-                <NavLink to={`/singleproduct/${id}`} className="btn-main">
-                  <Button className="btn">Read More</Button>
-                </NavLink>
-              </div>
-            </div>
-          );
-        })}
+         return <Product2 key={curElem.id} {...curElem} />;
+       })}
       </div>
     </Wrapper>
   );
 };
+
+
+
+// const ListView = ({ products }) => {
+//   return (
+//     <Wrapper className="section">
+//       <div className="container grid">
+//         {products.map((curElem) => {
+//           const { id, name, image, price, description } = curElem;
+//           return (
+//             <div className="card grid grid-two-column">
+//               <figure>
+//                 <img src={image} alt={name} />
+//               </figure>
+
+//               <div className="card-data">
+//                 <h3>{name}</h3>
+//                 <p>
+//                   <FormatPrice price={price} />
+//                 </p>
+//                 <p>{description.slice(0, 90)}...</p>
+
+//                 <NavLink to={`/singleproduct/${id}`} className="btn-main">
+//                   <Button className="btn">Read More</Button>
+//                 </NavLink>
+//               </div>
+//             </div>
+//           );
+//         })}
+//       </div>
+//     </Wrapper>
+//   );
+// };
 
 export default ListView;
