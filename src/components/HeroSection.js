@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components';
 import {Button} from "../styles/Button"
 import { NavLink } from 'react-router-dom';
+
+
 const Wrapper = styled.section`
   padding: 12rem 0;
 
@@ -87,7 +89,7 @@ const HeroSection = ({myData}) => {
           Discover a world of curated products that cater to your style and needs. From fashion to electronics, find the perfect items that make you any your family smile.
           </p>
 
-          <NavLink>
+          <NavLink to={'/products'}>
             <Button>Shop Now</Button>
           </NavLink>
         </div>

@@ -124,7 +124,8 @@ const SingleProduct = () => {
   }, []);
 
   if (isSingleLoading) {
-    return <div className="page_loading">Loading.....</div>;
+    return <div style={{ display: "flex", justifyContent: "center" }}><h2>Loading....</h2></div>;
+    
   }
 
   return (

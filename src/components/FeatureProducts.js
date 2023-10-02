@@ -101,6 +101,12 @@ const Wrapper = styled.section`
       }
     }
   }
+
+  .loading{
+    display:flex;
+    justify-content:center;
+    background-color:blue;
+  }
 `;
 
 
@@ -110,8 +116,9 @@ const FeatureProducts = () => {
   const { isLoading, featureProducts } = useProductContext();
 
   if (isLoading) {
-    return <div> ......Loading </div>;
+    return <div style={{ display: "flex", justifyContent: "center" }}><h2>Loading....</h2></div>;
   }
+
 
   return (
     <Wrapper className="section">
